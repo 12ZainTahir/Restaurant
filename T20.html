@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: 'Segoe UI';
+
+
+
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  
+  z-index:1; /* Sit on top */
+  justify-content: center;
+ 
+  width: 60%; /* Full width */
+  height: 70%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color:rgba(1,39,61,255) ;/* Black w/ opacity */
+
+overflow: auto;
+}
+
+/* Modal Content */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(245,245,245);
+ 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50rem;
+}
+@media screen and(max-width:500px){
+  .modal-content {
+    width:80%
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.buttons{
+  display: flex;
+ 
+ 
+}
+.buttons button{
+background: none;
+
+}
+.dec{
+background-color:rgba(178,178,178,255);
+
+}
+.header{
+  background-color: rgba(2,162,239,255);
+ margin: 0;
+ overflow: hidden;
+ 
+}
+.inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+</style>
+</head>
+<body>
+
+<h2>Modal Example</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+ 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+ <header  class ="header">
+  <nav>
+    <h1>Modal Title</h1>
+  </nav>
+
+ </header>
+    <p>Some text in the Modal Lorem ipsum
+       dolor sit amet 
+      consectetur adipisicing elit. Est, qui.</p>
+  <div  class="buttons">
+    <button class="dec">Tab 1 </button>
+    <button > Tab 2</button>
+    <button class="dec">Tab 3</button>
+  </div>
+  
+  
+  </div>
+</div>
+
+
+<script>
+// Get the modal
+ modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+ btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+ span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "flex";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display=" none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
